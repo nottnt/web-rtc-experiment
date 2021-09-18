@@ -10,8 +10,8 @@
 		return userAgentSplitToArrLast.includes('Line')
 	}
 
-	if (detectOpenWebOnLineApp()) {
-		window.open(window.location , '_system');
+	if (window.location.href.includes('?openExternalBrowser=1')) {
+		window.location.href = window.location.href.replace('/?openExternalBrowser=1', '');
 	}
 
 	export const getCurrentWebOpen = () => {
