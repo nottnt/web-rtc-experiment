@@ -1,0 +1,84 @@
+main {
+    text-align: center;
+    padding: 1em;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff3e00;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0040C3;
+    font-size: larger;
+    text-align: center;
+    color: white;
+    height: 10%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0040C3;
+    font-size: larger;
+    text-align: center;
+    color: white;
+    height: 5%;
+}
+
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    width: auto;
+}
+
+.div-table {
+    display: table;         
+    width: 100%;         
+    background-color: #0040C3;         
+    border-radius: 10px;
+    border-spacing: 5px; /* cellspacing:poor IE support for  this */
+}
+
+.div-table-row {
+    display: table-row;
+    width: auto;
+    clear: both;
+}
+
+.div-table-col.header {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.div-table-col {
+    float: left; /* fix for  buggy browsers */
+    display: table-column;         
+    width: 31.8%;
+    border-radius: 5px;
+    margin-left: 1%; 
+    background-color: #b7f2fb;  
+}
+
+@media (min-width: 640px) {
+    main {
+        max-width: none;
+    }
+}
