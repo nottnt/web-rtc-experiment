@@ -19,7 +19,8 @@
 	}
 
 	export let name;
-	$: adapter
+	$: adapter;
+	$: userAgent
 </script>
 <link rel="stylesheet" href="main.css" />
 
@@ -40,6 +41,9 @@
 					<div class="div-table-col">{adapter.browserDetails.browser}</div>
 					<div class="div-table-col">{adapter.browserDetails.version}</div>
 					<div class="div-table-col">{getCurrentWebOpen()}</div>
+				</div>
+				<div class="div-table-row" style="color: white;">
+					{userAgent}
 				</div>
 			</div>
 		</div>
