@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import RecordRTC from './RecordRTC.js';
+    import RecordRTC, { MediaStreamRecorder, WhammyRecorder } from './RecordRTC.js';
     let videoRecorder;
     let videoRecorded;
     let videoRecordedURL;
@@ -10,7 +10,7 @@
         videoRecorder  = document.getElementById("video-recorder");
         videoRecorded = document.getElementById("video-recorded");
 	});
-
+    console.log('MediaStreamRecorder: ', MediaStreamRecorder,'WhammyRecorder: ', WhammyRecorder)
     export const handleRecordVideo = () => {
         const recordingTimeMS = 6000;
         console.log(videoRecorder)
@@ -31,7 +31,9 @@
             recorder = RecordRTC(camera, {
                 type: 'video',
                 audio: false,
-                video: true
+                video: true,
+                mimeType: 'video/webm',
+                recorderType: MediaStreamRecorder || WhammyRecorder
             });
 
             recorder.startRecording();
