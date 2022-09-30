@@ -111,3 +111,6 @@ surge public my-project.surge.sh
 ### With [GHPages](https://pages.github.com/)
 
 https://docs.github.com/en/pages/quickstart
+
+First of all
+yarn `build` and then yarn `deplay`
