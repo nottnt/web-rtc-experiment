@@ -113,4 +113,4 @@ surge public my-project.surge.sh
 https://docs.github.com/en/pages/quickstart
 
 First of all
-yarn `build` and then yarn `deplay`
+yarn `build` and then yarn `deploy`
